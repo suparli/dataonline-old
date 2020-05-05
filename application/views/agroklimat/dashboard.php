@@ -234,11 +234,8 @@
 			<div id="map" class="card"></div>
 		</div>
 		<div class="col-xl-6 py-2">
-			<?php if (!empty($map)) {
-				foreach ($map as $maps) : ?>
-					<img src="<?= base_url('assets/img/device/') . $maps['image']; ?>" class="card-img" style="height:400px">
-			<?php endforeach;
-			} ?>
+			<?php foreach ($map as $maps) ?>
+			<img src="<?= base_url('assets/img/device/') . $maps['image']; ?>" class="card-img" style="height:400px">
 		</div>
 	</div>
 

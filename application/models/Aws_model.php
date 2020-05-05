@@ -30,13 +30,15 @@ class Aws_model extends CI_Model
 		return $this->db->query($query)->result_array();
 	}
 
-	public function getDataUser()
+	public function getDataTables()
 	{
+		$this->load->library('datatables');
 		$id_user = $this->session->userdata('id_user');
-		$queryuser = "SELECT  a.id_aws,DATE(a.date) as tanggal,TIME_FORMAT(TIME(a.date), '%H:%i') as time, a.radiasi, a.suhu, a.tekanan_udara, a.kecepatan_angin, a.arah_angin,
-        a.curah_hujan, a.kelembaban, c.id_user, b.id_user, b.id_aws FROM data_aws a, user c, user_access_data b WHERE  a.id_aws= b.id_aws 
-        AND c.id_user = b.id_user AND c.id_user = '$id_user' ORDER BY a.date DESC LIMIT 1000 ";
-		return $this->db->query($queryuser)->result_array();
+		$this->datatables->select('a.id as id, DATE(a.date) as tanggal,TIME(a.date) as time, radiasi, suhu, tekanan_udara, kecepatan_angin, arah_angin, curah_hujan, kelembaban');
+		$this->datatables->from('data_aws a, user c, user_access_data b');
+		$this->datatables->where("a.id_aws= b.id_aws AND c.id_user = b.id_user AND c.id_user = '$id_user' ");
+		$this->db->order_by("date", "desc");
+		return $this->datatables->generate();
 	}
 
 	public function filterData($datea, $dateb)

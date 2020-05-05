@@ -1,59 +1,55 @@
-$(function () {
-	let dateInterval = getQueryParameter('date_filter');
-	let start = moment().startOf('isoWeek');
-	let end = moment().endOf('isoWeek');
-	if (dateInterval) {
-		dateInterval = dateInterval.split(' - ');
-		start = dateInterval[0];
-		end = dateInterval[1];
-	}
-	$('#date_filter').daterangepicker({
-		"showDropdowns": true,
-		"showWeekNumbers": true,
-		"alwaysShowCalendars": true,
-		startDate: start,
-		endDate: end,
-		locale: {
-			format: 'YYYY-MM-DD',
-			firstDay: 1,
-		},
-		ranges: {
-			'Today': [moment(), moment()],
-			'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-			'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-			'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-			'This Month': [moment().startOf('month'), moment().endOf('month')],
-			'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
-			'This Year': [moment().startOf('year'), moment().endOf('year')],
-			'Last Year': [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')],
-			'All time': [moment().subtract(30, 'year').startOf('month'), moment().endOf('month')],
-		}
-	});
-});
-function getQueryParameter(name) {
-	const url = window.location.href;
-	name = name.replace(/[\[\]]/g, "\\$&");
-	const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-		results = regex.exec(url);
-	if (!results) return null;
-	if (!results[2]) return '';
-	return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
 $(document).ready(function () {
-	let table = $("#data_aws").DataTable({
-		dom: "Bfrtip",
-		buttons: {
-			buttons: [
-				'excel',
+	$.fn.dataTableExt.oApi.fnPagingInfo = function (oSettings) {
+		return {
+			"iStart": oSettings._iDisplayStart,
+			"iEnd": oSettings.fnDisplayEnd(),
+			"iLength": oSettings._iDisplayLength,
+			"iTotal": oSettings.fnRecordsTotal(),
+			"iFilteredTotal": oSettings.fnRecordsDisplay(),
+			"iPage": Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
+			"iTotalPages": Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
+		};
+	};
 
-			],
-			dom: {
-				button: {
-					tag: "button",
-					className: "btn btn-primary",
-				}
-			}
+
+
+
+	let table = $('#data_aws').DataTable({
+		"processing": true,
+		"serverSide": true,
+		"ajax": {
+			"url": base_url + 'aws/jsonTable',
+			"type": "POST"
+		},
+		"columns": [
+			{
+				"data": "id",
+				"orderable": true
+			},
+			{ "data": "tanggal", "type": "date" },
+			{ "data": "time" },
+			{ "data": "radiasi" },
+			{ "data": "suhu" },
+			{ "data": "tekanan_udara" },
+			{ "data": "kecepatan_angin" },
+			{ "data": "arah_angin" },
+			{ "data": "curah_hujan" },
+			{ "data": "kelembaban" }
+
+		],
+		order: [[0, 'desc']],
+		rowCallback: function (row, data, iDisplayIndex) {
+			var info = this.fnPagingInfo();
+			var page = info.iPage;
+			var length = info.iLength;
+			var index = page * length + (iDisplayIndex + 1);
+			$('td:eq(0)', row).html(index);
+
 		}
+
 	});
+
+
 });
+
+

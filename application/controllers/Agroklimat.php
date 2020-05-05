@@ -47,17 +47,7 @@ class Agroklimat extends CI_Controller
 	{
 		$data['title'] = 'Tabel ';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		if (isset($_POST['submit'])) {
-			$part =  explode(' - ', $this->input->post('date_filter'));
-			$datea = $part[0];
-			$dateb = $part[1];
-			$data['dataaws'] =  $this->agro->filterData($datea, $dateb);
-			$this->load->view('agroklimat/index', $data);
-		} else {
-
-			$data['dataaws'] =  $this->agro->getDataUser();
-			$this->load->view('agroklimat/index', $data);
-		}
+		$this->load->view('agroklimat/index', $data);
 	}
 
 
@@ -66,5 +56,20 @@ class Agroklimat extends CI_Controller
 		$data['title'] = 'Charts ';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->load->view('agroklimat/charts', $data);
+	}
+
+	public function report()
+	{
+		$data['title']		= 'Report';
+		$data['user']		= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		if (isset($_POST['submit'])) {
+			$part =  explode(' - ', $this->input->post('date_filter'));
+			$datea = $part[0];
+			$dateb = $part[1];
+			$data['dataaaws'] =  $this->agro->filterData($datea, $dateb);
+			$this->load->view('agroklimat/report', $data);
+		} else {
+			$this->load->view('agroklimat/report', $data);
+		}
 	}
 }

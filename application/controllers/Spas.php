@@ -49,17 +49,7 @@ class Spas extends CI_Controller
 
 		$data['title']	= 'Tabel   ';
 		$data['user']	= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		if (isset($_POST['submit'])) {
-			$part =  explode(' - ', $this->input->post('date_filter'));
-			$datea = $part[0];
-			$dateb = $part[1];
-			$data['dataspas'] =  $this->spas->filterData($datea, $dateb);
-			$this->load->view('spas/index', $data);
-		} else {
-
-			$data['dataspas'] =  $this->spas->getDataUser();
-			$this->load->view('spas/index', $data);
-		}
+		$this->load->view('spas/index', $data);
 	}
 
 	public function charts()
@@ -68,5 +58,20 @@ class Spas extends CI_Controller
 		$data['user']		= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['datacharts'] = $this->spas->getDataCharts();
 		$this->load->view('spas/charts', $data);
+	}
+
+	public function report()
+	{
+		$data['title']		= 'Report   ';
+		$data['user']		= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		if (isset($_POST['submit'])) {
+			$part =  explode(' - ', $this->input->post('date_filter'));
+			$datea = $part[0];
+			$dateb = $part[1];
+			$data['dataaws'] =  $this->spas->filterData($datea, $dateb);
+			$this->load->view('spas/report', $data);
+		} else {
+			$this->load->view('spas/report', $data);
+		}
 	}
 }

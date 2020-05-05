@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$config['base_url'] = 'https://localhost/dataonline';
+$config['base_url'] = 'https://localhost/api';
 $config['index_page'] = '';
 $config['uri_protocol']	= 'REQUEST_URI';
 $config['url_suffix'] = '';

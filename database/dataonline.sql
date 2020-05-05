@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Bulan Mei 2020 pada 06.27
+-- Waktu pembuatan: 05 Bulan Mei 2020 pada 05.24
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.26
 
@@ -238,9 +238,7 @@ INSERT INTO `user_access_data` (`id`, `id_user`, `id_aws`) VALUES
 (43, 18, '101'),
 (44, 19, '102'),
 (45, 23, '201'),
-(47, 24, '301'),
-(48, 25, '201'),
-(49, 26, '301');
+(47, 24, '301');
 
 -- --------------------------------------------------------
 
@@ -363,7 +361,9 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (24, 12, 'Charts ', 'agroklimat/charts', 'fas fa-fw fa-chart-area', 1),
 (27, 14, 'Charts   ', 'spas/charts', 'fas fa-fw fa-chart-area', 1),
 (30, 15, 'List of Devices', 'device', 'fas fa-fw  fa-tools', 1),
-(31, 16, 'List Account Member', 'member', 'fas fa-fw fa-user-tie', 1);
+(31, 16, 'List Account Member', 'member', 'fas fa-fw fa-user-tie', 1),
+(32, 6, 'Report', 'aws/report', 'fas fa-fw fa-download', 1),
+(33, 12, 'Report', 'agroklimat/report', 'fas fa-fw fa-download', 1);
 
 --
 -- Indexes for dumped tables
@@ -461,19 +461,19 @@ ALTER TABLE `counter`
 -- AUTO_INCREMENT untuk tabel `data_aaws`
 --
 ALTER TABLE `data_aaws`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_aws`
 --
 ALTER TABLE `data_aws`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_device`
 --
 ALTER TABLE `data_device`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT untuk tabel `data_nama_aws`
@@ -485,7 +485,7 @@ ALTER TABLE `data_nama_aws`
 -- AUTO_INCREMENT untuk tabel `data_spas`
 --
 ALTER TABLE `data_spas`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `keys`
@@ -497,13 +497,13 @@ ALTER TABLE `keys`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_data`
 --
 ALTER TABLE `user_access_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_menu`

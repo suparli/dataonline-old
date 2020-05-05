@@ -24,6 +24,11 @@ class Aws extends CI_Controller
 		echo json_encode($json);
 	}
 
+	public function jsonTable()
+	{
+		echo $this->aws->getDataTables();
+	}
+
 	public function jsonChart()
 	{
 		$json =  $this->aws->getDataCharts();
@@ -44,17 +49,7 @@ class Aws extends CI_Controller
 
 		$data['title']	= 'Tabel';
 		$data['user']	= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		if (isset($_POST['submit'])) {
-			$part =  explode(' - ', $this->input->post('date_filter'));
-			$datea = $part[0];
-			$dateb = $part[1];
-			$data['dataaws'] =  $this->aws->filterData($datea, $dateb);
-			$this->load->view('aws/index', $data);
-		} else {
-
-			$data['dataaws'] =  $this->aws->getDataUser();
-			$this->load->view('aws/index', $data);
-		}
+		$this->load->view('aws/index', $data);
 	}
 
 	public function charts()
@@ -63,5 +58,20 @@ class Aws extends CI_Controller
 		$data['user']		= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['datacharts'] = $this->aws->getDataCharts();
 		$this->load->view('aws/charts', $data);
+	}
+
+	public function report()
+	{
+		$data['title']		= 'Report';
+		$data['user']		= $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		if (isset($_POST['submit'])) {
+			$part =  explode(' - ', $this->input->post('date_filter'));
+			$datea = $part[0];
+			$dateb = $part[1];
+			$data['dataaws'] =  $this->aws->filterData($datea, $dateb);
+			$this->load->view('aws/report', $data);
+		} else {
+			$this->load->view('aws/report', $data);
+		}
 	}
 }
