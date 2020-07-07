@@ -85,6 +85,22 @@
 		</div>
 
 		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Ultraviolet</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="ultraviolet"></div>
+						</div>
+						<div class="col-auto">
+							<i id="ultraviolet1" class="fas fa-sun fa-2x faa-spin animated"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
 			<div class="card border-left-success shadow h-100 py-2">
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
@@ -139,15 +155,79 @@
 		</div>
 
 		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">ET</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="et"></div>
+						</div>
+						<div class="col-auto">
+							<i id="et1" class="fas fa-sun fa-2x faa-spin animated"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
 			<div class="card border-left-success shadow h-100 py-2">
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Suhu Tanah</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800" id="suhutanah"></div>
+							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Suhu Tanah 1</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="suhutanah1"></div>
 						</div>
 						<div class="col-auto">
-							<i id="suhutanah1" class="fas fa-temperature-high fa-2x  faa-pulse animated"></i>
+							<i id="suhutanah11" class="fas fa-temperature-high fa-2x  faa-pulse animated"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-success shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Suhu Tanah 2</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="suhutanah2"></div>
+						</div>
+						<div class="col-auto">
+							<i id="suhutanah12" class="fas fa-temperature-high fa-2x  faa-pulse animated"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-success shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Suhu Tanah 3</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="suhutanah3"></div>
+						</div>
+						<div class="col-auto">
+							<i id="suhutanah13" class="fas fa-temperature-high fa-2x  faa-pulse animated"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-success shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Suhu Tanah 4</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="suhutanah4"></div>
+						</div>
+						<div class="col-auto">
+							<i id="suhutanah14" class="fas fa-temperature-high fa-2x  faa-pulse animated"></i>
 						</div>
 					</div>
 				</div>
@@ -159,12 +239,66 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Kadar Air Tanah</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800" id="kadarairtanah"></div>
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Soil Mosture 1</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="soilmosture1"></div>
 
 						</div>
 						<div class="col-auto">
-							<i id="kadarair1" class="fas fa-water fa-2x  faa-pulse animated"></i>
+							<i id="soilmosture12" class="fas fa-water fa-2x  faa-pulse animated"></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-primary shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Soil Mosture 2</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="soilmosture2"></div>
+
+						</div>
+						<div class="col-auto">
+							<i id="soilmosture12" class="fas fa-water fa-2x  faa-pulse animated"></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-primary shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Soil Mosture 3</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="soilmosture3"></div>
+
+						</div>
+						<div class="col-auto">
+							<i id="soilmosture13" class="fas fa-water fa-2x  faa-pulse animated"></i>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-primary shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Soil Mosture 4</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="soilmosture4"></div>
+
+						</div>
+						<div class="col-auto">
+							<i id="soilmosture14" class="fas fa-water fa-2x  faa-pulse animated"></i>
 
 						</div>
 					</div>
@@ -177,11 +311,11 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Leaf Wetnes</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800" id="leafwetnes"></div>
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">LeafWetnes 1</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="leafwetnes1"></div>
 						</div>
 						<div class="col-auto">
-							<i id="leafwetnes1" class="fas fa-leaf fa-2x  faa-pulse animated"></i>
+							<i id="leafwetnes11" class="fas fa-leaf fa-2x  faa-pulse animated"></i>
 						</div>
 					</div>
 				</div>
@@ -189,41 +323,22 @@
 		</div>
 
 		<div class="col-xl-3 col-md-6 mb-4">
-			<div class="card border-left-success shadow h-100 py-2">
+			<div class="card border-left-warning shadow h-100 py-2">
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Aux 1</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800" id="aux1"></div>
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">LeafWetnes 2</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800" id="leafwetnes2"></div>
 						</div>
 						<div class="col-auto">
-							<i class="fas fa-plug fa-2x   faa-pulse animated"></i>
+							<i id="leafwetnes12" class="fas fa-leaf fa-2x  faa-pulse animated"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="col-xl-3 col-md-6 mb-4">
-			<div class="card border-left-info shadow h-100 py-2">
-				<div class="card-body">
-					<div class="row no-gutters align-items-center">
-						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Aux 2 </div>
-							<div class="row no-gutters align-items-center">
-								<div class="col-auto">
-									<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="aux2"></div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-auto">
-							<i class="fas fa-plug fa-2x  faa-pulse animated"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 
 
@@ -249,7 +364,7 @@
 	let base_url = '<?= base_url() ?>';
 </script>
 <script src="<?= base_url(); ?>/assets/js/moment.js"></script>
-<script src="<?= base_url(); ?>/assets/js/dashboard_aaws.js"></script>
+<script src="<?= base_url(); ?>/assets/js/dashboard_aaws_davis.js"></script>
 <script src="<?= base_url(); ?>/assets/vendor/leaflet/leaflet.js"></script>
-<script src="<?= base_url(); ?>/assets/js/map_aaws.js"></script>
+<script src="<?= base_url(); ?>/assets/js/map_aaws_davis.js"></script>
 <?php $this->load->view('templates/end_footer'); ?>

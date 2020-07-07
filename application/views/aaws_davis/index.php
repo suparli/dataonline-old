@@ -13,7 +13,7 @@
 				<div class="row ">
 					<div class="col">
 						<div class="card-body">
-							<form method="POST" action=" <?= base_url('agroklimat/tabel'); ?>">
+							<form method="POST" action=" <?= base_url('aaws_davis/tabel'); ?>">
 								<div class="row">
 									<div class="col-8">
 										<input class="form-control" id="date_filter" name="date_filter" placeholder="Filter Here" autocomplete="off">
@@ -46,18 +46,24 @@
 							<th>Tanggal&nbsp;&nbsp;&nbsp;&nbsp;</th>
 							<th>Jam</th>
 							<th>Radiasi (Wat/m<sup>2</sup>)</th>
+							<th>UV (Wat/m<sup>2</sup>)</th>
 							<th>Suhu&nbsp;Udara (&deg;C)</th>
 							<th>Tekanan&nbsp;Udara (mbar)</th>
 							<th>Kecepatan&nbsp;Angin (&deg;)</th>
 							<th>Arah&nbsp;Angin (m/s)</th>
 							<th>Curah&nbsp;Hujan (mm)</th>
 							<th>Kelembaban (%)</th>
-							<th>Soil Mosture</th>
-							<th>Suhu Tanah</th>
-							<th>Leafwetnes</th>
-							<th>Aux 1</th>
-							<th>Aux 2</th>
-							<th>Aux 3</th>
+							<th>ET (Wat/m<sup>2</sup>)</th>
+							<th>Soil&nbsp;Mosture&nbsp;1</th>
+							<th>Soil&nbsp;Mosture&nbsp;2</th>
+							<th>Soil&nbsp;Mosture&nbsp;3</th>
+							<th>Soil&nbsp;Mosture&nbsp;4</th>
+							<th>Suhu&nbsp;Tanah&nbsp;1</th>
+							<th>Suhu&nbsp;Tanah&nbsp;2</th>
+							<th>Suhu&nbsp;Tanah&nbsp;3</th>
+							<th>Suhu&nbsp;Tanah&nbsp;4</th>
+							<th>Leafwetnes&nbsp;1</th>
+							<th>Leafwetnes&nbsp;2</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -68,18 +74,24 @@
 								<td><?= $da['tanggal'] ?></td>
 								<td><?= $da['time'] ?></td>
 								<td><?= $da['radiasi'] ?></td>
+								<td><?= $da['ultraviolet'] ?></td>
 								<td><?= $da['suhu'] ?></td>
 								<td><?= $da['tekanan_udara'] ?></td>
 								<td><?= $da['kecepatan_angin'] ?></td>
 								<td><?= $da['arah_angin'] ?></td>
 								<td><?= $da['curah_hujan'] ?></td>
 								<td><?= $da['kelembaban'] ?></td>
-								<td><?= $da['soil_mosture'] ?></td>
-								<td><?= $da['suhu_tanah'] ?></td>
-								<td><?= $da['leafwetnes'] ?></td>
-								<td><?= $da['aux1'] ?></td>
-								<td><?= $da['aux2'] ?></td>
-								<td><?= $da['aux3'] ?></td>
+								<td><?= $da['et'] ?></td>
+								<td><?= $da['soil_mosture1'] ?></td>
+								<td><?= $da['soil_mosture2'] ?></td>
+								<td><?= $da['soil_mosture3'] ?></td>
+								<td><?= $da['soil_mosture4'] ?></td>
+								<td><?= $da['suhu_tanah1'] ?></td>
+								<td><?= $da['suhu_tanah2'] ?></td>
+								<td><?= $da['suhu_tanah3'] ?></td>
+								<td><?= $da['suhu_tanah4'] ?></td>
+								<td><?= $da['leafwetnes1'] ?></td>
+								<td><?= $da['leafwetnes2'] ?></td>
 								<?php $i++; ?>
 							<?php endforeach; ?>
 					</tbody>
@@ -99,5 +111,5 @@
 <script src="<?= base_url(); ?>assets/vendor/datatables/buttons.flash.min.js"></script>
 <script src="<?= base_url(); ?>assets/vendor/datatables/jszip.min.js"></script>
 <script src="<?= base_url(); ?>assets/vendor/datatables/buttons.html5.min.js"></script>
-<script src="<?= base_url(); ?>assets/js/table_aaws.js"></script>
+<script src="<?= base_url(); ?>assets/js/table_aaws_davis.js"></script>
 <?php $this->load->view('templates/end_footer'); ?>

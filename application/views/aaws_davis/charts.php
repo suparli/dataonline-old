@@ -4,6 +4,78 @@
 
 
 
+<div class="col-lg-12 soilmosture" id="soilmosture">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Soil Mosture</h6>
+		</div>
+		<div class="card-body">
+			<div class="chart-area">
+				<canvas id="chartSoil"></canvas>
+			</div>
+			<hr>
+		</div>
+	</div>
+
+</div>
+
+<div class="col-lg-12 suhutanah" id="suhutanah">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Suhu Tanah</h6>
+		</div>
+		<div class="card-body">
+			<div class="chart-area">
+				<canvas id="chartSuhuTanah"></canvas>
+			</div>
+			<hr>
+		</div>
+	</div>
+
+</div>
+
+<div class="col-lg-12 leafwetnes" id="leafwetnes">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Leafwetnes</h6>
+		</div>
+		<div class="card-body">
+			<div class="chart-area">
+				<canvas id="chartLeafwetnes"></canvas>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+<div class="col-lg-12 radiasi" id="et">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">ET</h6>
+		</div>
+		<div class="card-body">
+			<div class="chart-area">
+				<canvas id="etChart"></canvas>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
+<div class="col-lg-12 radiasi" id="ultraviolet">
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">Ultraviolet</h6>
+		</div>
+		<div class="card-body">
+			<div class="chart-area">
+				<canvas id="ultravioletChart"></canvas>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+
 <div class="col-lg-12 suhu" id="suhu">
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
@@ -90,39 +162,11 @@
 	</div>
 </div>
 
-<div class="col-lg-12 soil" id="soil">
-	<div class="card shadow mb-4">
-		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary">Suhu Tanah & Kadar Air Tanah </h6>
-		</div>
-		<div class="card-body">
-			<div class="chart-area">
-				<canvas id="soilChart"></canvas>
-			</div>
-			<hr>
-		</div>
-	</div>
-</div>
-
-<div class="col-lg-12 leafwetnes" id="leafwetnes">
-	<div class="card shadow mb-4">
-		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary">Leafwetnes</h6>
-		</div>
-		<div class="card-body">
-			<div class="chart-area">
-				<canvas id="leafwetnesChart"></canvas>
-			</div>
-			<hr>
-		</div>
-	</div>
-</div>
-
 
 <?php $this->load->view('templates/footer'); ?>
 <script>
 	let base_url = '<?= base_url() ?>';
 </script>
 <script src="<?= base_url() ?>assets/vendor/chart.js/Chart.min.js"></script>
-<script src="<?= base_url(); ?>assets/js/chart_aaws.js"></script>
+<script src="<?= base_url(); ?>assets/js/chart_aaws_davis.js"></script>
 <?php $this->load->view('templates/end_footer'); ?>
