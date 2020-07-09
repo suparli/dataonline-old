@@ -89,11 +89,11 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Ultraviolet</div>
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Index Ultraviolet</div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800" id="ultraviolet"></div>
 						</div>
 						<div class="col-auto">
-							<i id="ultraviolet1" class="fas fa-sun fa-2x faa-spin animated"></i>
+							<i id="ultraviolet1" class="far fa-sun fa-2x faa-spin animated"></i>
 						</div>
 					</div>
 				</div>
@@ -163,7 +163,7 @@
 							<div class="h5 mb-0 font-weight-bold text-gray-800" id="et"></div>
 						</div>
 						<div class="col-auto">
-							<i id="et1" class="fas fa-sun fa-2x faa-spin animated"></i>
+							<i id="et1" class="fas fa-angle-double-up fa-2x faa-float animated"></i>
 						</div>
 					</div>
 				</div>

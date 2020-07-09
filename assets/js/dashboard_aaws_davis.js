@@ -62,16 +62,16 @@ function ChartsRad() {
 			$('#tekananudara').html(tekananudara + ' mbar');
 			$('#kecepatanangin').html(kecepatanangin + ' m/s');
 			$('#arahangin').html(arahangin + "\xBA");
-			$('#ultraviolet').html(ultraviolet + "\xBA");
-			$('#et').html(et + "\xBA");
-			$('#suhutanah1').html(suhutanah1+ "\xBAC");
-			$('#suhutanah2').html(suhutanah2 + "\xBAC");
-			$('#suhutanah3').html(suhutanah3 + "\xBAC");
-			$('#suhutanah4').html(suhutanah4 + "\xBAC");
-			$('#soilmosture1').html(soilmosture1 + " %");
-			$('#soilmosture2').html(soilmosture2 + " %");
-			$('#soilmosture3').html(soilmosture3 + " %");
-			$('#soilmosture4').html(soilmosture4 + " %");
+			$('#ultraviolet').html(ultraviolet);
+			$('#et').html(et);
+			$('#suhutanah1').html(suhutanah1+ " \xBAC");
+			$('#suhutanah2').html(suhutanah2 + " \xBAC");
+			$('#suhutanah3').html(suhutanah3 + " \xBAC");
+			$('#suhutanah4').html(suhutanah4 + " \xBAC");
+			$('#soilmosture1').html(soilmosture1 + " cbar");
+			$('#soilmosture2').html(soilmosture2 + " cbar");
+			$('#soilmosture3').html(soilmosture3 + " cbar");
+			$('#soilmosture4').html(soilmosture4 + " cbar");
 			$('#leafwetnes1').html(leafwetnes1 + " cbar");
 			$('#leafwetnes2').html(leafwetnes2 + " cbar");
 

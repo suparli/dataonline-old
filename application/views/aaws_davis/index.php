@@ -45,25 +45,25 @@
 							<th>No</th>
 							<th>Tanggal&nbsp;&nbsp;&nbsp;&nbsp;</th>
 							<th>Jam</th>
-							<th>Radiasi (Wat/m<sup>2</sup>)</th>
-							<th>UV (Wat/m<sup>2</sup>)</th>
+							<th>Radiasi (Watt/m<sup>2</sup>)</th>
+							<th>Index UV</th>
 							<th>Suhu&nbsp;Udara (&deg;C)</th>
 							<th>Tekanan&nbsp;Udara (mbar)</th>
 							<th>Kecepatan&nbsp;Angin (&deg;)</th>
 							<th>Arah&nbsp;Angin (m/s)</th>
 							<th>Curah&nbsp;Hujan (mm)</th>
 							<th>Kelembaban (%)</th>
-							<th>ET (Wat/m<sup>2</sup>)</th>
-							<th>Soil&nbsp;Mosture&nbsp;1</th>
-							<th>Soil&nbsp;Mosture&nbsp;2</th>
-							<th>Soil&nbsp;Mosture&nbsp;3</th>
-							<th>Soil&nbsp;Mosture&nbsp;4</th>
-							<th>Suhu&nbsp;Tanah&nbsp;1</th>
-							<th>Suhu&nbsp;Tanah&nbsp;2</th>
-							<th>Suhu&nbsp;Tanah&nbsp;3</th>
-							<th>Suhu&nbsp;Tanah&nbsp;4</th>
-							<th>Leafwetnes&nbsp;1</th>
-							<th>Leafwetnes&nbsp;2</th>
+							<th>Evapotranspirasi</th>
+							<th>Soil&nbsp;Mosture&nbsp;1 (cbar)</th>
+							<th>Soil&nbsp;Mosture&nbsp;2 (cbar)</th>
+							<th>Soil&nbsp;Mosture&nbsp;3 (cbar)</th>
+							<th>Soil&nbsp;Mosture&nbsp;4 (cbar)</th>
+							<th>Suhu&nbsp;Tanah&nbsp;1 (&deg;C)</th>
+							<th>Suhu&nbsp;Tanah&nbsp;2 (&deg;C)</th>
+							<th>Suhu&nbsp;Tanah&nbsp;3 (&deg;C)</th>
+							<th>Suhu&nbsp;Tanah&nbsp;4 (&deg;C)</th>
+							<th>Leafwetnes&nbsp;1 (cbar)</th>
+							<th>Leafwetnes&nbsp;2 (cbar)</th>
 						</tr>
 					</thead>
 					<tbody>
