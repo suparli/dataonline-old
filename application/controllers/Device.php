@@ -81,7 +81,7 @@ class Device extends CI_Controller
 			);
 
 			$this->device->saveData($data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
+			$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan .
                                             </div>');
 			//redirect
 			redirect('device/');
@@ -98,10 +98,12 @@ class Device extends CI_Controller
 		);
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->load->view('device/editdevice', $data);
+		
 	}
 
 	public function update()
 	{
+		
 		$data['data_device'] = $this->db->get_where('data_device', ['id' => $this->input->post('id')])->row_array();
 		$id['id']			 = $this->input->post("id");
 		// Cek Jika Ada Gambar
@@ -110,16 +112,20 @@ class Device extends CI_Controller
 			$config['upload_path'] = './assets/img/device/';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size']     = '2048';
-			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
 			if ($this->upload->do_upload('image')) {
-				$old_image = $data['data_device']['image'];
+				$old_image = $data['data_device']['image'];				
 				if ($old_image != 'default.jpg') {
-					unlink(FCPATH . 'assets/img/device/' . $old_image);
+					unlink(FCPATH .'assets/img/device/' . $old_image);
 				}
 				$new_image = $this->upload->data('file_name');
 				$this->db->set('image', $new_image);
+				$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate .
+                                                </div>');
 			} else {
-				echo $this->upload->display_errors();
+				$eror =  $this->upload->display_errors();
+				$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible"> Gagal! data gagal diupdate . '.$eror.'
+                                                </div>');
 			}
 		}
 
@@ -134,10 +140,7 @@ class Device extends CI_Controller
 			'status'              => $this->input->post("status")
 		);
 
-		$this->device->update($data, $id);
-
-		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate didatabase.
-                                                </div>');
+		$this->device->update($data, $id);		
 		redirect('device');
 	}
 
@@ -148,7 +151,7 @@ class Device extends CI_Controller
 		$this->device->delete($iddevice);
 		$old_image 			 = $data['data_device']['image'];
 		unlink(FCPATH . 'assets/img/device/' . $old_image);
-		$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible"> Success! data berhasil didelete didatabase.
+		$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible"> Success! data berhasil didelete .
                                                 </div>');
 		redirect('device/');
 	}

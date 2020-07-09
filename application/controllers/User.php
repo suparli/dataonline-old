@@ -37,7 +37,7 @@ class User extends CI_Controller
 				$config['upload_path']	 = './assets/img/profile/';
 				$config['allowed_types'] = 'gif|jpg|png';
 				$config['max_size']   	 = '2048';
-				$this->load->library('upload', $config);
+				$this->upload->initialize($config);
 				if ($this->upload->do_upload('image')) {
 					$old_image = $data['user']['image'];
 					if ($old_image != 'default.png') {
@@ -45,15 +45,16 @@ class User extends CI_Controller
 					}
 					$new_image = $this->upload->data('file_name');
 					$this->db->set('image', $new_image);
+					$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your Profile Updated</div>');
 				} else {
 					echo $this->upload->display_errors();
+					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Your Profile Not Updated</div>');
 				}
 			}
 
 			$this->db->set('name', $name);
 			$this->db->where('email', $email);
 			$this->db->update('user');
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Your Profile Updated</div>');
 			redirect('user');
 		}
 	}
