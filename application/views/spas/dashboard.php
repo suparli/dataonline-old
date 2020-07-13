@@ -11,7 +11,6 @@
 </div>
 <div class="container-fluid">
 	<div class="row">
-
 		<div class="col-xl-3 col-md-6 mb-4">
 			<div class="card border-left-info shadow h-100 py-2">
 				<div class="card-body">
@@ -72,19 +71,18 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-
-<div class="row">
-	<div class=" col-xl-6 py-2 ">
-		<div id="map" class="card"></div>
-	</div>
-	<div class="col-xl-6 py-2">
-		<?php if (!empty($map)) {
-			foreach ($map as $maps) : ?>
-				<img src="<?= base_url('assets/img/device/') . $maps['image']; ?>" class="card-img" style="height:400px">
-		<?php endforeach;
-		} ?>
+	
+	<div class="row">
+		<div class=" col-xl-6 py-2 ">
+			<div id="map" class="card"></div>
+		</div>
+		<div class="col-xl-6 py-2">
+			<?php if (!empty($map)) {
+				foreach ($map as $maps) : ?>
+					<img src="<?= base_url('assets/img/device/') . $maps['image']; ?>" class="card-img" style="height:400px">
+			<?php endforeach;
+			} ?>
+		</div>
 	</div>
 </div>
 

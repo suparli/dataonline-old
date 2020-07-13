@@ -42,6 +42,48 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 	return s.join(dec);
 }
 
+function arah_angin (value) {
+	var arah ;
+	// N
+	if (value > 337.5) {
+		arah =  value + '\xBA U';
+	}
+	// N
+	else if (value >= 0 && value <= 22.5) {
+		arah = value + '\xBA U';
+	}
+	// NE
+	else if (value > 22.5 && value <= 67.5) {
+		arah =  value + '\xBA TL';
+	}
+	// E
+	else if (value > 67.5 && value <= 112.5) {
+		arah =  value + '\xBA T';
+	}
+	// SE
+	else if (value > 112.5 && value <= 157.5) {
+		arah =  value + '\xBA TG';
+	}
+	// S
+	else if (value > 157.5 && value <= 202.5) {
+		arah =  value + '\xBA S';
+	}
+	// SW
+	else if (value > 202.5 && value <= 247.5) {
+		arah =  value + '\xBA BD';
+	}
+	// W
+	else if (value > 247.5 && value <= 292.5) {
+		arah =  value + '\xBA B';
+	}
+	// NW
+	else if (value > 292.5 && value <= 337.5) {
+		arah =  value + '\xBA BL';
+	}
+
+	return arah ;
+}
+
 $.ajax({
 	type: 'POST',
 	url: base_url + 'aaws_davis/jsonChart',
@@ -1177,10 +1219,13 @@ $.ajax({
 					}],
 					yAxes: [{
 						ticks: {
-							maxTicksLimit: 5,
+							stepSize: 90,
+							maxTicksLimit: 8,
+							min :0 ,
+							max : 360 ,
 							padding: 10,
 							callback: function (value, index, values) {
-								return number_format(value) + "\xBA";
+								return arah_angin(value);
 							}
 						},
 						gridLines: {
@@ -1212,7 +1257,7 @@ $.ajax({
 							var datasetLabel = chart
 								.datasets[tooltipItem.datasetIndex]
 								.label || '';
-							return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + '\xBA';
+							return datasetLabel + ': ' + arah_angin(tooltipItem.yLabel);
 						}
 					}
 				}
